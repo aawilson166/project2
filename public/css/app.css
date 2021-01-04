@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    border: 1px solid red;
+    height: 15rem;
+    width: 10rem;
+    margin: 2rem;
+}
+
+.cardimg {
+    height: 8rem;
+    width: 8rem;
+}

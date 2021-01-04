@@ -7,5 +7,26 @@
 </head>
 <body>
   <h1>EDIT Route</h1>
+
+  <form action="/trails/<%=trail.id%>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%=trail.name%>" />
+
+    <label for="location">Location:</label>
+    <input type="text" name="location" value="<%=trail.location%>" />
+
+    <label for="difficulty">Difficulty:</label>
+    <input type="text" name="difficulty" value="<%=trail.difficulty%>" />
+
+    <label for="image">Name:</label>
+    <input type="text" name="image" value="<%=trail.image%>" />
+    
+    <input type="submit" value="Submit">
+  </form>
+
+  <a href="/trails">
+    <button>Back</button>
+  </a>
+
 </body>
 </html>

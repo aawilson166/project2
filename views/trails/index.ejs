@@ -3,9 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/app.css">
   <title>Document</title>
 </head>
 <body>
   <h1>INDEX Route</h1>
+
+  <div class="container">
+    <%for(let i = 0; i <= trails.length-1; i++) { %>
+      <div class="card">
+        <img class="cardimg" src="<%=trails[i].image%>" alt="img"></br>
+        <%=trails[i].name%></br>
+        <%=trails[i].location%></br>
+        <%=trails[i].difficulty%></br>
+        <a href="/trails/<%=trails[i]._id%>">
+          <button class="button">View Trail</button>
+        </a>
+
+      </div>
+    <%}%>
+
+  </div>
+
+  <a href="trails/new">
+    <button class="button">New Trail</button>
+  </a>
+
+
+
 </body>
 </html>

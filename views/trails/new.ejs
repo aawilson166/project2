@@ -7,5 +7,25 @@
 </head>
 <body>
   <h1>NEW Route</h1>
+
+  <form action="/trails" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required />
+
+    <label for="location">Location:</label>
+    <input type="text" name="location" />
+
+    <label for="difficulty">Difficulty:</label>
+    <input type="text" name="difficulty" />
+
+    <label for="image">Name:</label>
+    <input type="text" name="image" value="<%=trail.image%>" />
+    
+    <input type="submit" value="Submit">
+  </form>
+
+  <a href="/trails">
+    <button>Back</button>
+  </a>
 </body>
 </html>
