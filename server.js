@@ -32,9 +32,9 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 app.use(methodOverride('_method'))
 
-// app.get('/', (req, res) => {
-//   res.send('Hello World')
-// })
+app.get('/', (req, res) => {
+  //res.send('Hello World')
+})
 
 // Controllers
 const trailsController = require('./controllers/trails_controller.js')
