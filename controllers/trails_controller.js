@@ -47,6 +47,20 @@ trails.get('/setup/seed', (req, res) => {
     )
 })
 
+
+
+//NEW
+trails.get('/new', (req, res) => {
+    res.render('trails/new.ejs')
+})
+
+//POSTING FROM NEW ROUTE
+trails.post('/', (req, res) => {
+    Trail.create(req.body, (error, createdTrail) => {
+        res.redirect('/trails')
+    })
+})
+
 //SHOW
 trails.get('/:id', (req, res) => {
     Trail.findById(req.params.id, (error, foundTrail) => {
@@ -75,20 +89,6 @@ trails.put('/:id', (req, res) => {
             res.redirect('/trails')
         }
     )
-})
-
-//NEW
-trails.get('/trails/new', (req, res) => {
-    res.render(
-        'trails/new.ejs'
-    )
-})
-
-//POSTING FROM NEW ROUTE
-trails.post('/trails', (req, res) => {
-    Trail.create(req.body, (error, createdTrail) => {
-        res.redirect('/trails')
-    })
 })
 
 module.exports = trails
