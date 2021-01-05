@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/app.css">
-  <title>Document</title>
+    <%- include ('../partials/head.ejs')%>
 </head>
 <body>
-  <h1>INDEX Route</h1>
+  <h1>Find Trails</h1>
 
   <div class="container">
     <%for(let i = 0; i <= trails.length-1; i++) { %>
       <div class="card">
         <img class="cardimg" src="<%=trails[i].image%>" alt="img"></br>
-        <%=trails[i].name%></br>
-        <%=trails[i].location%></br>
-        <%=trails[i].difficulty%></br>
+
+        <div class="name"><%=trails[i].name%></div>
+        <div class="location"><%=trails[i].location%></div>
+        <div class="difficulty"><%=trails[i].difficulty%></div>
+        
         <a href="/trails/<%=trails[i]._id%>">
           <button class="button">View Trail</button>
         </a>

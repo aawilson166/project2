@@ -1,11 +1,33 @@
+body {
+    background-color: #7A5433;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    border-radius: 1rem;
+}
+
+form {
+    line-height: 2rem;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
 }
 
 .card {
-    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 15rem;
     width: 10rem;
     margin: 2rem;
@@ -14,4 +36,31 @@
 .cardimg {
     height: 8rem;
     width: 8rem;
+    border-radius: 1rem;
+    border: .25rem solid #7A7833;
+}
+
+.button {
+    border-radius: 1rem;
+    background-color: #7A7833;
+    height: 1.5rem;
+    width: 6rem;
+}
+
+button {
+    border-radius: 1rem;
+    background-color: #7A7833;
+    height: 1.5rem;
+    width: 6rem;
+}
+
+
+
+.editcard {
+    margin: .5rem;
+}
+
+/* SHOW */
+.show-container {
+    margin: auto;
 }

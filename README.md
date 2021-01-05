@@ -1,6 +1,6 @@
 # project2
 
-full stack app where the user can find Mountain bike trails, add new trails, edit existing trails and delete old trails
+full stack app where the user can find Mountain bike trails, add new trails, edit existing trails and delete old trails. 
 
 
 1/2 - setup all routes & add basic styling
@@ -13,4 +13,5 @@ full stack app where the user can find Mountain bike trails, add new trails, edi
 
 1/6 - practice presentation
 
-finish setting up NEW route
+figure out why I can't depoly on heroku
+

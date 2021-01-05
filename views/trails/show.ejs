@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <%- include ('../partials/head.ejs')%>
 </head>
 <body>
-  <h1>SHOW Route</h1>
+  <h1>Trail Info</h1>
 
-  <img src="<%=trail.image%>" alt="img"> </br>
-  <%=trail.name%> </br>
-  <%=trail.location%> </br>
-  <%=trail.difficulty%> </br>
+  <div class="show-container">
+    <img src="<%=trail.image%>" alt="img"> </br>
+    <%=trail.name%> </br>
+    <%=trail.location%> </br>
+    <%=trail.difficulty%> </br>
 
-  <a class="button" href="/trails/<%=trail._id%>/edit">
-    <button>Edit</button>
-  </a>
+    <a class="button" href="/trails/<%=trail._id%>/edit">
+      <button>Edit</button>
+    </a>
 
-  <form action="/trails/<%=trail.id%>?_method=DELETE" method="POST">
-    <input class="button" type="submit" value="DELETE"/>
-  </form>
+    <form action="/trails/<%=trail.id%>?_method=DELETE" method="POST">
+      <input class="button" type="submit" value="DELETE"/>
+    </form>
 
-  <a class="button" href="/trails">
-    <button>Back</button>
-  </a>
+    <a class="button" href="/trails">
+      <button>Back</button>
+    </a>
+  </div>
 
 </body>
 </html>

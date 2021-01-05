@@ -91,4 +91,10 @@ trails.put('/:id', (req, res) => {
     )
 })
 
+trails.delete('/:id', (req, res) => {
+    Trail.findByIdAndRemove(req.params.id, (err, deletedTrail) => {
+        res.redirect('/trails')
+    })
+})
+
 module.exports = trails
