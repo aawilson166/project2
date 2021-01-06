@@ -31,28 +31,39 @@ trails.get('/setup/seed', (req, res) => {
     Trail.create(
         [
             {
+                name: 'Rampage',
+                location: 'Utah',
+                difficulty: '...',
+                image: 'https://www.bikes.com/sites/default/files/carson-rampage1.jpg',
+                description: 'Invite only competition built by the worlds best builders for the worlds best riders'
+            },
+            {
                 name: 'Snow Summit',
                 location: 'Big Bear',
                 difficulty: 'Hard',
-                image: 'https://d1pdyfnmzhu191.cloudfront.net/images/librariesprovider2/default-album/time-to-rip-5463.jpg?sfvrsn=1&size=400'
+                image: 'https://d1pdyfnmzhu191.cloudfront.net/images/librariesprovider2/default-album/time-to-rip-5463.jpg?sfvrsn=1&size=400',
+                description: 'Open for Summer season, Ski lifts available. Terrain for every skill level'
             },
             {
                 name: 'Skypark',
                 location: 'Lake Arrowhead',
                 difficulty: 'Hard',
-                image: 'https://skyparksantasvillage.com/wp-content/uploads/bike-park-top1b.jpg'
+                image: 'https://skyparksantasvillage.com/wp-content/uploads/bike-park-top1b.jpg',
+                description: 'Open year round, no lifts available'
             },   
             {
                 name: 'Double D',
                 location: 'Murrieta',
                 difficulty: 'Medium',
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCaWBY2XhpjsOa487Mf0N1f5UZ-rrEBdExRA&usqp=CAU'
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCaWBY2XhpjsOa487Mf0N1f5UZ-rrEBdExRA&usqp=CAU',
+                description: 'In the greer ranch trail system. flowy trail with small jumps'
             },
             {
                 name: 'Slaughterhouse',
-                location: 'Murrieta',
+                location: 'Locals only brah',
                 difficulty: 'Hard',
-                image: 'https://nobodyhikesinla.files.wordpress.com/2015/01/shc-bridge.jpg'
+                image: 'https://nobodyhikesinla.files.wordpress.com/2015/01/shc-bridge.jpg',
+                description: 'Secret downhill trail, fast and flowy packed with large features'
                 
             },
             {
@@ -65,7 +76,8 @@ trails.get('/setup/seed', (req, res) => {
                 name: 'Distortion',
                 location: 'Murrieta',
                 difficulty: 'Easy',
-                image: 'https://www.lagranderide.com/sites/lagranderide.com/files/0330171256.jpg'
+                image: 'https://www.lagranderide.com/sites/lagranderide.com/files/0330171256.jpg',
+                description: 'Nice and easy trail, good for the whole family'
             }
         ],
         (error, data) => {

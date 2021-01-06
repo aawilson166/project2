@@ -4,7 +4,8 @@ const trailSchema = new mongoose.Schema({
     name: {type: String, required: true},
     location: {type: String},
     difficulty: {type: String},
-    image: {type: String}
+    image: {type: String},
+    description: {type: String}
 })
 
 const Trail = mongoose.model('Trail', trailSchema)

@@ -3,14 +3,15 @@ const express = require('express')
 const sessions = express.Router()
 const User = require('../models/users_schema.js')
 
+
 sessions.get('/new', (req, res) => {
     res.render('sessions/new.ejs', {currentUser: req.session.currentUser})
 })
 
-//Do I need this block of code?
-sessions.get('/', (req, res) => {
-    res.render('trails/index.ejs')
-})
+// //Do I need this block of code?
+// sessions.get('/', (req, res) => {
+//     res.render('trails/index.ejs')
+// })
 
 sessions.post('/', (req, res) => {
     User.findOne({username: req.body.username}, (err, foundUser) => {
@@ -31,10 +32,18 @@ sessions.post('/', (req, res) => {
     })
 })
 
-sessions.delete('/sessions', (req, res) => {
+// sessions.delete('/', (req, res) => {
+//     console.log('TEST TEST')
+//     req.session.destroy(() => {
+//         console.log('Testing...')
+//         res.redirect('/')
+//     })
+// })
+
+sessions.get('/logout', (req, res) => {
     req.session.destroy(() => {
-        res.redirect('/')
+        res.redirect('/')    
     })
-})
+  })
 
 module.exports = sessions
