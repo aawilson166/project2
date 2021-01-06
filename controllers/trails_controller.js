@@ -2,12 +2,20 @@ const express = require('express')
 const Trail = require('../models/trails_schema.js')
 const trails = express.Router()
 
+const isAuthenticated = (req, res, next) => { 
+    if (req.session.currentUser) {
+        return next()
+    }else {
+        res.redirect('/sessions/new')
+    }
+}
 
 //INDEX
 trails.get('/', (req, res) => {
     Trail.find({}, (error, allTrails) => {
         res.render('trails/index.ejs', {
-            trails: allTrails
+            trails: allTrails,
+            currentUser: req.session.currentUser
         })
     })
 })
@@ -51,7 +59,10 @@ trails.get('/setup/seed', (req, res) => {
 
 //NEW
 trails.get('/new', (req, res) => {
-    res.render('trails/new.ejs')
+    res.render(
+        'trails/new.ejs',
+        {currentUser: req.session.currentUser}
+        )
 })
 
 //POSTING FROM NEW ROUTE
@@ -62,19 +73,21 @@ trails.post('/', (req, res) => {
 })
 
 //SHOW
-trails.get('/:id', (req, res) => {
-    Trail.findById(req.params.id, (error, foundTrail) => {
-        res.render('trails/show.ejs', {
-            trail: foundTrail
+trails.get('/:id', isAuthenticated, (req, res) => {
+        Trail.findById(req.params.id, (error, foundTrail) => {
+            res.render('trails/show.ejs', {
+                trail: foundTrail,
+                currentUser: req.session.currentUser,
+            })
         })
-    })
 })
 
 //EDIT
 trails.get('/:id/edit', (req, res) => {
     Trail.findById(req.params.id, (error, foundTrail) => {
         res.render('trails/edit.ejs', {
-            trail: foundTrail
+            trail: foundTrail,
+            currentUser: req.session.currentUser
         })
     })
 })

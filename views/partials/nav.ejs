@@ -1,0 +1,15 @@
+<a href="/trails">Trails</a>
+<ul>
+    <li><a href="/trails/new">Add new trail</a></li>
+    <% if (currentUser) { %>
+    <li>Welcome <%= currentUser.username %></li>
+    <li>
+      <form action="/sessions?_method=DELETE" method="POST">
+        <input type="submit" value="Log Out" class="button" />
+      </form>
+    </li>
+    <% } else { %>
+    <li><a href="/users/new">Sign Up</a></li>
+    <li><a href="/sessions/new">Log In</a></li>
+    <% } %>
+</ul>

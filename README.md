@@ -15,3 +15,21 @@ full stack app where the user can find Mountain bike trails, add new trails, edi
 
 figure out why I can't depoly on heroku
 
+if im having issues w/ pages loading check nav partial
+
+if server not found check dotenv
+
+having issues loading show.ejs currentUser not defined
+
+(node:99896) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+cannot post /session error when trying to login
+
+cannot deploy to heroku
+
+should my data also be showing up in mongo terminal
+
+
+
+

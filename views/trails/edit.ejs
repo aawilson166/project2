@@ -4,6 +4,7 @@
   <%- include ('../partials/head.ejs')%>
 </head>
 <body>
+  <%- include ('../partials/nav.ejs')%>
   <h1>EDIT Route</h1>
 
   <form class="editcontainer" action="/trails/<%=trail.id%>?_method=PUT" method="POST">
