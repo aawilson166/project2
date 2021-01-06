@@ -13,15 +13,15 @@
     <%=trail.location%> </br>
     <%=trail.difficulty%> </br>
 
-    <a class="button" href="/trails/<%=trail._id%>/edit">
+    <a class="button" href="/<%=trail._id%>/edit">
       <button>Edit</button>
     </a>
 
-    <form action="/trails/<%=trail.id%>?_method=DELETE" method="POST">
+    <form action="/<%=trail.id%>?_method=DELETE" method="POST">
       <input class="button" type="submit" value="DELETE"/>
     </form>
 
-    <a class="button" href="/trails">
+    <a class="button" href="/">
       <button>Back</button>
     </a>
   </div>

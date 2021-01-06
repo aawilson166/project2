@@ -47,13 +47,11 @@ app.use(
   })
 )
 
-app.get('/', (req, res) => {
-  //res.send('Hello World')
-})
+
 
 // Controllers
 const trailsController = require('./controllers/trails_controller.js')
-app.use('/trails', trailsController)
+app.use('/', trailsController)
 
 const userController = require('./controllers/users_controller.js')
 app.use('/users', userController)

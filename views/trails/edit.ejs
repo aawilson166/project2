@@ -7,7 +7,7 @@
   <%- include ('../partials/nav.ejs')%>
   <h1>EDIT Route</h1>
 
-  <form class="editcontainer" action="/trails/<%=trail.id%>?_method=PUT" method="POST">
+  <form class="editcontainer" action="/<%=trail.id%>?_method=PUT" method="POST">
     <label for="name">Name:</label>
     <input class="editcard" type="text" name="name" value="<%=trail.name%>" /> </br>
 
@@ -23,7 +23,7 @@
     <input class="editcard button" type="submit" value="Submit"> </br>
   </form>
 
-  <a href="/trails/<%=trail.id%>">
+  <a href="/<%=trail.id%>">
     <button>Back</button>
   </a>
 

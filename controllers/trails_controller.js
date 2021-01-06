@@ -10,6 +10,7 @@ const isAuthenticated = (req, res, next) => {
     }
 }
 
+
 //INDEX
 trails.get('/', (req, res) => {
     Trail.find({}, (error, allTrails) => {
@@ -22,7 +23,7 @@ trails.get('/', (req, res) => {
 
 //this will redirect to /trails if user does not type it in.
 trails.get('/', (req, res) => {
-    res.redirect('/trails')
+    res.redirect('/')
 })
 
 //SEED
@@ -50,7 +51,7 @@ trails.get('/setup/seed', (req, res) => {
             }
         ],
         (error, data) => {
-            res.redirect('/trails')
+            res.redirect('/')
         }
     )
 })
@@ -68,7 +69,7 @@ trails.get('/new', (req, res) => {
 //POSTING FROM NEW ROUTE
 trails.post('/', (req, res) => {
     Trail.create(req.body, (error, createdTrail) => {
-        res.redirect('/trails')
+        res.redirect('/')
     })
 })
 
@@ -99,14 +100,14 @@ trails.put('/:id', (req, res) => {
         req.body,
         { new: true },
         (error, updatedModel) => {
-            res.redirect('/trails')
+            res.redirect('/')
         }
     )
 })
 
 trails.delete('/:id', (req, res) => {
     Trail.findByIdAndRemove(req.params.id, (err, deletedTrail) => {
-        res.redirect('/trails')
+        res.redirect('/')
     })
 })
 
