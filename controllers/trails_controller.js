@@ -31,6 +31,18 @@ trails.get('/setup/seed', (req, res) => {
     Trail.create(
         [
             {
+                name: 'Snow Summit',
+                location: 'Big Bear',
+                difficulty: 'Hard',
+                image: 'https://d1pdyfnmzhu191.cloudfront.net/images/librariesprovider2/default-album/time-to-rip-5463.jpg?sfvrsn=1&size=400'
+            },
+            {
+                name: 'Skypark',
+                location: 'Lake Arrowhead',
+                difficulty: 'Hard',
+                image: 'https://skyparksantasvillage.com/wp-content/uploads/bike-park-top1b.jpg'
+            },   
+            {
                 name: 'Double D',
                 location: 'Murrieta',
                 difficulty: 'Medium',
@@ -40,14 +52,20 @@ trails.get('/setup/seed', (req, res) => {
                 name: 'Slaughterhouse',
                 location: 'Murrieta',
                 difficulty: 'Hard',
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCaWBY2XhpjsOa487Mf0N1f5UZ-rrEBdExRA&usqp=CAU'
+                image: 'https://nobodyhikesinla.files.wordpress.com/2015/01/shc-bridge.jpg'
                 
             },
             {
                 name: 'La Cresta',
                 location: 'Murrieta',
                 difficulty: 'Easy',
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCaWBY2XhpjsOa487Mf0N1f5UZ-rrEBdExRA&usqp=CAU'
+                image: 'https://i.ytimg.com/vi/nOf-4fmwjkA/maxresdefault.jpg'
+            },
+            {
+                name: 'Distortion',
+                location: 'Murrieta',
+                difficulty: 'Easy',
+                image: 'https://www.lagranderide.com/sites/lagranderide.com/files/0330171256.jpg'
             }
         ],
         (error, data) => {

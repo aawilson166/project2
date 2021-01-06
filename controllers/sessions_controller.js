@@ -31,7 +31,7 @@ sessions.post('/', (req, res) => {
     })
 })
 
-sessions.delete('/', (req, res) => {
+sessions.delete('/sessions', (req, res) => {
     req.session.destroy(() => {
         res.redirect('/')
     })
