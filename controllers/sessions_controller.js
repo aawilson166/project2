@@ -7,6 +7,7 @@ sessions.get('/new', (req, res) => {
     res.render('sessions/new.ejs', {currentUser: req.session.currentUser})
 })
 
+//Do I need this block of code?
 sessions.get('/', (req, res) => {
     res.render('trails/index.ejs')
 })

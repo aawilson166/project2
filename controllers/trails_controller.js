@@ -111,4 +111,12 @@ trails.delete('/:id', (req, res) => {
     })
 })
 
+trails.get(
+    '/dropdatabase/cannotundo/areyousure',
+    (req, res) => {
+        Trail.collection.drop()
+        res.send('You dropped the Database!')
+    }
+)
+
 module.exports = trails
