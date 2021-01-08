@@ -1,6 +1,3 @@
-//Show data on correct pages and create navigation buttons
-//add images to my schema
-//get DB and collection to show up in mongo
 
 const express = require('express')
 const methodOverride = require('method-override')
@@ -10,10 +7,6 @@ const session = require('express-session')
 require('dotenv').config()
 const app = express()
 const db = mongoose.connection
-
-
-
-
 
 //allows heroku to use any port it wants and we can locally access our app using port 3003 *localhost3003* (or statement)
 const PORT = process.env.PORT || 3003
